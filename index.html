@@ -75,43 +75,50 @@
     </nav>
 
     <!-- Hero Section -->
-    <section id="home" class="pt-32 pb-20 px-4 bg-[#0d1117]">
-        <div class="max-w-7xl mx-auto">
-            <div class="max-w-4xl mx-auto text-center">
-                <h1 class="text-5xl sm:text-6xl lg:text-7xl font-bold mb-8 leading-tight animate-fade-in">
-                    Automação que transforma
-                    <span class="block text-gray-400 mt-2">seu negócio</span>
-                </h1>
-                
-                <p class="text-xl sm:text-2xl text-gray-400 mb-12 max-w-3xl mx-auto leading-relaxed animate-fade-in delay-100">
-                    Transformamos processos manuais em fluxos automatizados com inteligência artificial. 
-                    Economize tempo, reduza custos e aumente a produtividade.
-                </p>
-                
-                <div class="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in delay-200 mb-16">
-                    <a href="#contact" class="inline-flex items-center justify-center px-8 py-4 bg-white text-gray-900 rounded-lg font-semibold hover:bg-gray-100 transition-all">
-                        Começar Agora
-                        <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
-                        </svg>
-                    </a>
-                    <a href="#automation" class="inline-flex items-center justify-center px-8 py-4 border border-gray-600 rounded-lg font-semibold hover:bg-gray-800 hover:border-gray-500 transition-all">
-                        Saiba Mais
-                    </a>
+    <section id="home" class="relative pt-24 pb-32 px-4 bg-[#0d1117] overflow-hidden">
+        <!-- Subtle gradient overlay -->
+        <div class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/20 pointer-events-none"></div>
+        
+        <div class="max-w-7xl mx-auto relative z-10">
+            <div class="max-w-5xl mx-auto">
+                <!-- Main content -->
+                <div class="text-center mb-16">
+                    <h1 class="text-6xl sm:text-7xl lg:text-8xl font-extrabold mb-6 leading-[1.1] tracking-tight animate-fade-in">
+                        Automação que<br>
+                        <span class="text-gray-500">transforma seu negócio</span>
+                    </h1>
+                    
+                    <p class="text-xl sm:text-2xl text-gray-400 mb-10 max-w-3xl mx-auto leading-relaxed animate-fade-in delay-100">
+                        Transformamos processos manuais em fluxos automatizados com inteligência artificial. 
+                        Economize tempo, reduza custos e aumente a produtividade.
+                    </p>
+                    
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in delay-200">
+                        <a href="#contact" class="group inline-flex items-center justify-center px-8 py-4 bg-white text-gray-900 rounded-lg font-semibold hover:bg-gray-100 transition-all shadow-lg hover:shadow-xl">
+                            Começar Agora
+                            <svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                            </svg>
+                        </a>
+                        <a href="#automation" class="inline-flex items-center justify-center px-8 py-4 border border-gray-600 text-gray-200 rounded-lg font-semibold hover:bg-gray-800 hover:border-gray-500 transition-all">
+                            Saiba Mais
+                        </a>
+                    </div>
                 </div>
                 
-                <div class="grid grid-cols-3 gap-8 max-w-2xl mx-auto pt-8 border-t border-[#30363d] animate-fade-in delay-300">
-                    <div>
-                        <div class="text-4xl font-bold mb-2">80%</div>
-                        <p class="text-gray-500 text-sm">Redução de tempo</p>
+                <!-- Stats -->
+                <div class="grid grid-cols-3 gap-12 max-w-3xl mx-auto pt-12 animate-fade-in delay-300">
+                    <div class="text-center">
+                        <div class="text-5xl lg:text-6xl font-extrabold mb-3 bg-gradient-to-br from-white to-gray-400 bg-clip-text text-transparent">80%</div>
+                        <p class="text-gray-500 text-sm font-medium">Redução de tempo</p>
                     </div>
-                    <div>
-                        <div class="text-4xl font-bold mb-2">24/7</div>
-                        <p class="text-gray-500 text-sm">Automação ativa</p>
+                    <div class="text-center">
+                        <div class="text-5xl lg:text-6xl font-extrabold mb-3 bg-gradient-to-br from-white to-gray-400 bg-clip-text text-transparent">24/7</div>
+                        <p class="text-gray-500 text-sm font-medium">Automação ativa</p>
                     </div>
-                    <div>
-                        <div class="text-4xl font-bold mb-2">99%</div>
-                        <p class="text-gray-500 text-sm">Precisão</p>
+                    <div class="text-center">
+                        <div class="text-5xl lg:text-6xl font-extrabold mb-3 bg-gradient-to-br from-white to-gray-400 bg-clip-text text-transparent">99%</div>
+                        <p class="text-gray-500 text-sm font-medium">Precisão</p>
                     </div>
                 </div>
             </div>
