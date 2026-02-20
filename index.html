@@ -9,7 +9,7 @@
     
     <title>abnr.dev - Automação Inteligente | Desenvolvimento Customizado</title>
     
-    <link rel="icon" type="image/png" href="logo.png">
+    <link rel="icon" type="image/png" href="favicon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -22,11 +22,6 @@
                     fontFamily: {
                         sans: ['Inter', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'sans-serif'],
                     },
-                    colors: {
-                        'abnr-dark': '#0d1117',
-                        'abnr-border': '#30363d',
-                        'abnr-card': '#161b22',
-                    }
                 }
             }
         }
@@ -44,17 +39,8 @@
             }
         }
         
-        @keyframes float {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-10px); }
-        }
-        
         .animate-fade-in {
             animation: fade-in-up 0.6s ease-out forwards;
-        }
-        
-        .animate-float {
-            animation: float 3s ease-in-out infinite;
         }
         
         .delay-100 { animation-delay: 100ms; }
@@ -64,31 +50,12 @@
         html {
             scroll-behavior: smooth;
         }
-        
-        .border-gradient {
-            border: 1px solid transparent;
-            background-clip: padding-box;
-            position: relative;
-        }
-        
-        .border-gradient::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 0;
-            z-index: -1;
-            margin: -1px;
-            border-radius: inherit;
-            background: linear-gradient(to bottom, rgba(255,255,255,0.1), rgba(255,255,255,0.05));
-        }
     </style>
 </head>
-<body class="bg-abnr-dark text-gray-200 font-sans antialiased">
+<body class="bg-[#0d1117] text-gray-200 font-sans antialiased">
     
     <!-- Navigation -->
-    <nav class="fixed w-full z-50 bg-abnr-dark/95 backdrop-blur-sm border-b border-abnr-border">
+    <nav class="fixed w-full z-50 bg-[#0d1117]/95 backdrop-blur-sm border-b border-[#30363d]">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16">
                 <div class="flex items-center">
@@ -108,7 +75,7 @@
     </nav>
 
     <!-- Hero Section -->
-    <section id="home" class="pt-32 pb-20 px-4">
+    <section id="home" class="pt-32 pb-20 px-4 bg-[#0d1117]">
         <div class="max-w-7xl mx-auto">
             <div class="max-w-4xl mx-auto text-center">
                 <h1 class="text-5xl sm:text-6xl lg:text-7xl font-bold mb-8 leading-tight animate-fade-in">
@@ -133,7 +100,7 @@
                     </a>
                 </div>
                 
-                <div class="grid grid-cols-3 gap-8 max-w-2xl mx-auto pt-8 border-t border-abnr-border animate-fade-in delay-300">
+                <div class="grid grid-cols-3 gap-8 max-w-2xl mx-auto pt-8 border-t border-[#30363d] animate-fade-in delay-300">
                     <div>
                         <div class="text-4xl font-bold mb-2">80%</div>
                         <p class="text-gray-500 text-sm">Redução de tempo</p>
@@ -152,7 +119,7 @@
     </section>
 
     <!-- Automation Section -->
-    <section id="automation" class="py-20 px-4 border-t border-abnr-border">
+    <section id="automation" class="py-20 px-4 bg-black">
         <div class="max-w-7xl mx-auto">
             <div class="text-center mb-16">
                 <h2 class="text-4xl sm:text-5xl font-bold mb-4">Automação com Inteligência Artificial</h2>
@@ -162,8 +129,12 @@
             </div>
             
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <div class="bg-abnr-card border border-abnr-border rounded-lg p-8 hover:border-gray-500 transition-all">
-                    <div class="text-5xl mb-4">🤖</div>
+                <div class="bg-[#161b22] border border-[#30363d] rounded-lg p-8 hover:border-gray-500 transition-all">
+                    <div class="w-12 h-12 mb-4 text-gray-400">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
+                        </svg>
+                    </div>
                     <h3 class="text-xl font-semibold mb-3">Chatbots Inteligentes</h3>
                     <p class="text-gray-400 mb-4 text-sm">Atendimento automatizado com IA que entende contexto e linguagem natural.</p>
                     <ul class="text-xs text-gray-500 space-y-2">
@@ -173,8 +144,12 @@
                     </ul>
                 </div>
                 
-                <div class="bg-abnr-card border border-abnr-border rounded-lg p-8 hover:border-gray-500 transition-all">
-                    <div class="text-5xl mb-4">📊</div>
+                <div class="bg-[#161b22] border border-[#30363d] rounded-lg p-8 hover:border-gray-500 transition-all">
+                    <div class="w-12 h-12 mb-4 text-gray-400">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+                        </svg>
+                    </div>
                     <h3 class="text-xl font-semibold mb-3">Análise Preditiva</h3>
                     <p class="text-gray-400 mb-4 text-sm">Machine Learning que prevê tendências baseado em dados históricos.</p>
                     <ul class="text-xs text-gray-500 space-y-2">
@@ -184,8 +159,13 @@
                     </ul>
                 </div>
                 
-                <div class="bg-abnr-card border border-abnr-border rounded-lg p-8 hover:border-gray-500 transition-all">
-                    <div class="text-5xl mb-4">⚙️</div>
+                <div class="bg-[#161b22] border border-[#30363d] rounded-lg p-8 hover:border-gray-500 transition-all">
+                    <div class="w-12 h-12 mb-4 text-gray-400">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                        </svg>
+                    </div>
                     <h3 class="text-xl font-semibold mb-3">RPA</h3>
                     <p class="text-gray-400 mb-4 text-sm">Robôs que executam tarefas repetitivas com precisão sobre-humana.</p>
                     <ul class="text-xs text-gray-500 space-y-2">
@@ -195,8 +175,12 @@
                     </ul>
                 </div>
                 
-                <div class="bg-abnr-card border border-abnr-border rounded-lg p-8 hover:border-gray-500 transition-all">
-                    <div class="text-5xl mb-4">🔍</div>
+                <div class="bg-[#161b22] border border-[#30363d] rounded-lg p-8 hover:border-gray-500 transition-all">
+                    <div class="w-12 h-12 mb-4 text-gray-400">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                        </svg>
+                    </div>
                     <h3 class="text-xl font-semibold mb-3">Processamento de Linguagem</h3>
                     <p class="text-gray-400 mb-4 text-sm">IA que compreende e gera texto em linguagem natural.</p>
                     <ul class="text-xs text-gray-500 space-y-2">
@@ -210,17 +194,29 @@
             <!-- Benefits -->
             <div class="mt-20 grid md:grid-cols-3 gap-8">
                 <div class="text-center p-8">
-                    <div class="text-5xl mb-4">⏱️</div>
+                    <div class="w-16 h-16 mx-auto mb-4 text-gray-400">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
                     <h4 class="text-xl font-semibold mb-3">Economia de Tempo</h4>
                     <p class="text-gray-400 text-sm">Reduza até 80% o tempo em tarefas repetitivas e foque no que importa.</p>
                 </div>
                 <div class="text-center p-8">
-                    <div class="text-5xl mb-4">💰</div>
+                    <div class="w-16 h-16 mx-auto mb-4 text-gray-400">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
                     <h4 class="text-xl font-semibold mb-3">Redução de Custos</h4>
                     <p class="text-gray-400 text-sm">Elimine erros e otimize processos, gerando economia significativa.</p>
                 </div>
                 <div class="text-center p-8">
-                    <div class="text-5xl mb-4">📈</div>
+                    <div class="w-16 h-16 mx-auto mb-4 text-gray-400">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
+                        </svg>
+                    </div>
                     <h4 class="text-xl font-semibold mb-3">Escalabilidade</h4>
                     <p class="text-gray-400 text-sm">Cresça sem aumentar proporcionalmente sua equipe.</p>
                 </div>
@@ -229,7 +225,7 @@
     </section>
 
     <!-- Services Section -->
-    <section id="services" class="py-20 px-4 border-t border-abnr-border">
+    <section id="services" class="py-20 px-4 bg-[#0d1117]">
         <div class="max-w-7xl mx-auto">
             <div class="text-center mb-16">
                 <h2 class="text-4xl sm:text-5xl font-bold mb-4">Nossos Serviços</h2>
@@ -237,8 +233,12 @@
             </div>
             
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div class="bg-abnr-card border border-abnr-border rounded-lg p-8 hover:border-gray-500 transition-all">
-                    <div class="text-4xl mb-4">🔄</div>
+                <div class="bg-[#161b22] border border-[#30363d] rounded-lg p-8 hover:border-gray-500 transition-all">
+                    <div class="w-12 h-12 mb-4 text-gray-400">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path>
+                        </svg>
+                    </div>
                     <h3 class="text-xl font-semibold mb-3">Automação de Workflows</h3>
                     <p class="text-gray-400 mb-4 text-sm">Automatizamos processos de ponta a ponta com integração entre sistemas.</p>
                     <ul class="text-xs text-gray-500 space-y-2">
@@ -249,8 +249,12 @@
                     </ul>
                 </div>
                 
-                <div class="bg-abnr-card border border-abnr-border rounded-lg p-8 hover:border-gray-500 transition-all">
-                    <div class="text-4xl mb-4">💬</div>
+                <div class="bg-[#161b22] border border-[#30363d] rounded-lg p-8 hover:border-gray-500 transition-all">
+                    <div class="w-12 h-12 mb-4 text-gray-400">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
+                        </svg>
+                    </div>
                     <h3 class="text-xl font-semibold mb-3">Chatbots e Assistentes</h3>
                     <p class="text-gray-400 mb-4 text-sm">Bots inteligentes que atendem 24/7 com linguagem natural.</p>
                     <ul class="text-xs text-gray-500 space-y-2">
@@ -261,8 +265,12 @@
                     </ul>
                 </div>
                 
-                <div class="bg-abnr-card border border-abnr-border rounded-lg p-8 hover:border-gray-500 transition-all">
-                    <div class="text-4xl mb-4">🎯</div>
+                <div class="bg-[#161b22] border border-[#30363d] rounded-lg p-8 hover:border-gray-500 transition-all">
+                    <div class="w-12 h-12 mb-4 text-gray-400">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                        </svg>
+                    </div>
                     <h3 class="text-xl font-semibold mb-3">Scraping e Data Mining</h3>
                     <p class="text-gray-400 mb-4 text-sm">Coleta automática de dados com análise inteligente.</p>
                     <ul class="text-xs text-gray-500 space-y-2">
@@ -273,8 +281,12 @@
                     </ul>
                 </div>
                 
-                <div class="bg-abnr-card border border-abnr-border rounded-lg p-8 hover:border-gray-500 transition-all">
-                    <div class="text-4xl mb-4">💻</div>
+                <div class="bg-[#161b22] border border-[#30363d] rounded-lg p-8 hover:border-gray-500 transition-all">
+                    <div class="w-12 h-12 mb-4 text-gray-400">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                        </svg>
+                    </div>
                     <h3 class="text-xl font-semibold mb-3">Sistemas Web Customizados</h3>
                     <p class="text-gray-400 mb-4 text-sm">Desenvolvimento de plataformas sob medida.</p>
                     <ul class="text-xs text-gray-500 space-y-2">
@@ -285,8 +297,12 @@
                     </ul>
                 </div>
                 
-                <div class="bg-abnr-card border border-abnr-border rounded-lg p-8 hover:border-gray-500 transition-all">
-                    <div class="text-4xl mb-4">🔌</div>
+                <div class="bg-[#161b22] border border-[#30363d] rounded-lg p-8 hover:border-gray-500 transition-all">
+                    <div class="w-12 h-12 mb-4 text-gray-400">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+                        </svg>
+                    </div>
                     <h3 class="text-xl font-semibold mb-3">APIs e Integrações</h3>
                     <p class="text-gray-400 mb-4 text-sm">Conectamos sistemas e criamos APIs robustas.</p>
                     <ul class="text-xs text-gray-500 space-y-2">
@@ -297,8 +313,12 @@
                     </ul>
                 </div>
                 
-                <div class="bg-abnr-card border border-abnr-border rounded-lg p-8 hover:border-gray-500 transition-all">
-                    <div class="text-4xl mb-4">☁️</div>
+                <div class="bg-[#161b22] border border-[#30363d] rounded-lg p-8 hover:border-gray-500 transition-all">
+                    <div class="w-12 h-12 mb-4 text-gray-400">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"></path>
+                        </svg>
+                    </div>
                     <h3 class="text-xl font-semibold mb-3">Cloud e Infraestrutura</h3>
                     <p class="text-gray-400 mb-4 text-sm">Deploy e manutenção de aplicações na nuvem.</p>
                     <ul class="text-xs text-gray-500 space-y-2">
@@ -313,7 +333,7 @@
     </section>
 
     <!-- Technologies -->
-    <section class="py-20 px-4 border-t border-abnr-border">
+    <section class="py-20 px-4 bg-black">
         <div class="max-w-7xl mx-auto">
             <div class="text-center mb-12">
                 <h2 class="text-3xl font-bold mb-4">Tecnologias</h2>
@@ -321,38 +341,46 @@
             </div>
             
             <div class="flex flex-wrap justify-center gap-4 max-w-3xl mx-auto">
-                <span class="px-4 py-2 bg-abnr-card border border-abnr-border rounded-lg text-sm">React</span>
-                <span class="px-4 py-2 bg-abnr-card border border-abnr-border rounded-lg text-sm">Node.js</span>
-                <span class="px-4 py-2 bg-abnr-card border border-abnr-border rounded-lg text-sm">PHP</span>
-                <span class="px-4 py-2 bg-abnr-card border border-abnr-border rounded-lg text-sm">Python</span>
-                <span class="px-4 py-2 bg-abnr-card border border-abnr-border rounded-lg text-sm">PostgreSQL</span>
-                <span class="px-4 py-2 bg-abnr-card border border-abnr-border rounded-lg text-sm">MySQL</span>
-                <span class="px-4 py-2 bg-abnr-card border border-abnr-border rounded-lg text-sm">Docker</span>
-                <span class="px-4 py-2 bg-abnr-card border border-abnr-border rounded-lg text-sm">AWS</span>
-                <span class="px-4 py-2 bg-abnr-card border border-abnr-border rounded-lg text-sm">Google Cloud</span>
+                <span class="px-4 py-2 bg-[#161b22] border border-[#30363d] rounded-lg text-sm">React</span>
+                <span class="px-4 py-2 bg-[#161b22] border border-[#30363d] rounded-lg text-sm">Node.js</span>
+                <span class="px-4 py-2 bg-[#161b22] border border-[#30363d] rounded-lg text-sm">PHP</span>
+                <span class="px-4 py-2 bg-[#161b22] border border-[#30363d] rounded-lg text-sm">Python</span>
+                <span class="px-4 py-2 bg-[#161b22] border border-[#30363d] rounded-lg text-sm">PostgreSQL</span>
+                <span class="px-4 py-2 bg-[#161b22] border border-[#30363d] rounded-lg text-sm">MySQL</span>
+                <span class="px-4 py-2 bg-[#161b22] border border-[#30363d] rounded-lg text-sm">Docker</span>
+                <span class="px-4 py-2 bg-[#161b22] border border-[#30363d] rounded-lg text-sm">AWS</span>
+                <span class="px-4 py-2 bg-[#161b22] border border-[#30363d] rounded-lg text-sm">Google Cloud</span>
             </div>
         </div>
     </section>
 
     <!-- Contact -->
-    <section id="contact" class="py-20 px-4 border-t border-abnr-border">
+    <section id="contact" class="py-20 px-4 bg-[#0d1117]">
         <div class="max-w-3xl mx-auto text-center">
-            <h2 class="text-4xl sm:text-5xl font-bold mb-6">Vamos Conversar?</h2>
+            <h2 class="text-4xl sm:text-5xl font-bold mb-6">Pronto para automatizar?</h2>
             <p class="text-xl text-gray-400 mb-12">
-                Tem um projeto em mente? Estamos prontos para transformar sua ideia em realidade.
+                Entre em contato e descubra como podemos otimizar seus processos.
             </p>
             
-            <div class="bg-abnr-card border border-abnr-border rounded-lg p-12">
+            <div class="bg-[#161b22] border border-[#30363d] rounded-lg p-12">
                 <div class="flex flex-col sm:flex-row gap-8 justify-center mb-8">
                     <div class="flex items-center justify-center space-x-3">
-                        <span class="text-2xl">📧</span>
+                        <div class="w-6 h-6 text-gray-400">
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                            </svg>
+                        </div>
                         <div class="text-left">
                             <p class="text-xs text-gray-500 mb-1">Email</p>
                             <a href="mailto:contato@abnr.dev" class="font-medium hover:text-white transition-colors">contato@abnr.dev</a>
                         </div>
                     </div>
                     <div class="flex items-center justify-center space-x-3">
-                        <span class="text-2xl">🌐</span>
+                        <div class="w-6 h-6 text-gray-400">
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"></path>
+                            </svg>
+                        </div>
                         <div class="text-left">
                             <p class="text-xs text-gray-500 mb-1">Website</p>
                             <a href="https://abnr.dev" class="font-medium hover:text-white transition-colors">abnr.dev</a>
@@ -371,7 +399,7 @@
     </section>
 
     <!-- Footer -->
-    <footer class="border-t border-abnr-border py-12 px-4 mt-20">
+    <footer class="bg-black py-12 px-4">
         <div class="max-w-7xl mx-auto">
             <div class="grid md:grid-cols-4 gap-8 mb-8">
                 <div class="col-span-2">
@@ -397,7 +425,7 @@
                 </div>
             </div>
             
-            <div class="border-t border-abnr-border pt-8 text-center text-sm text-gray-600">
+            <div class="border-t border-[#30363d] pt-8 text-center text-sm text-gray-600">
                 <p>&copy; 2026 abnr.dev. Todos os direitos reservados.</p>
             </div>
         </div>
