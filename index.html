@@ -3,172 +3,398 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="abnr.dev - Desenvolvimento customizado e automação inteligente com IA">
-    <meta name="keywords" content="desenvolvimento customizado, automação, inteligência artificial, IA, software sob medida">
+    <meta name="description" content="abnr.dev - Desenvolvimento customizado e automação inteligente com IA. Transformamos ideias em soluções digitais inovadoras.">
+    <meta name="keywords" content="desenvolvimento customizado, automação, inteligência artificial, IA, software sob medida, sistemas personalizados">
     <meta name="author" content="abnr.dev">
     
     <title>abnr.dev - Desenvolvimento customizado e automação com IA</title>
     
+    <link rel="icon" type="image/png" href="logo.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
         
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            line-height: 1.6;
-            color: #737373;
-            background: linear-gradient(135deg, #092732 0%, #555555 100%);
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
         }
         
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 40px 20px;
-            text-align: center;
+        @keyframes pulse-glow {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
         }
         
-        .logo {
-            width: 200px;
-            height: 200px;
-            margin: 0 auto 30px;
-            background: #ffffff;
-            border-radius: 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 48px;
-            font-weight: bold;
-            color: #092732;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        .animate-fade-in-up {
+            animation: fadeInUp 0.8s ease-out forwards;
         }
         
-        h1 {
-            color: #ffffff;
-            font-size: 3rem;
-            margin-bottom: 20px;
-            font-weight: 700;
+        .animate-float {
+            animation: float 3s ease-in-out infinite;
         }
         
-        .tagline {
-            color: #ffffff;
-            font-size: 1.5rem;
-            margin-bottom: 40px;
-            opacity: 0.9;
+        .animate-pulse-glow {
+            animation: pulse-glow 2s ease-in-out infinite;
         }
         
-        .description {
-            background: rgba(255, 255, 255, 0.1);
+        .delay-100 { animation-delay: 100ms; }
+        .delay-200 { animation-delay: 200ms; }
+        .delay-300 { animation-delay: 300ms; }
+        .delay-400 { animation-delay: 400ms; }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #092732 0%, #555555 50%, #092732 100%);
+            background-size: 200% 200%;
+            animation: gradient 15s ease infinite;
+        }
+        
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        
+        .glass {
+            background: rgba(255, 255, 255, 0.05);
             backdrop-filter: blur(10px);
-            padding: 30px;
-            border-radius: 15px;
-            margin-bottom: 40px;
-            color: #ffffff;
-            font-size: 1.1rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
         }
         
-        .contact {
-            margin-top: 40px;
+        .hover-lift {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
         
-        .contact a {
-            display: inline-block;
-            padding: 15px 40px;
-            background: #ffffff;
-            color: #092732;
-            text-decoration: none;
-            border-radius: 50px;
-            font-weight: 600;
-            font-size: 1.1rem;
-            transition: all 0.3s ease;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+        .hover-lift:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
         }
         
-        .contact a:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 30px rgba(0,0,0,0.3);
-            background: #737373;
-            color: #ffffff;
-        }
-        
-        .features {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-            margin-top: 60px;
-        }
-        
-        .feature {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            padding: 30px;
-            border-radius: 15px;
-            color: #ffffff;
-        }
-        
-        .feature h3 {
-            font-size: 1.3rem;
-            margin-bottom: 15px;
-            color: #ffffff;
-        }
-        
-        .feature p {
-            opacity: 0.9;
-            line-height: 1.6;
-        }
-        
-        @media (max-width: 768px) {
-            h1 {
-                font-size: 2rem;
-            }
-            
-            .tagline {
-                font-size: 1.2rem;
-            }
-            
-            .features {
-                grid-template-columns: 1fr;
-            }
+        html {
+            scroll-behavior: smooth;
         }
     </style>
 </head>
-<body>
-    <div class="container">
-        <div class="logo">abnr.dev</div>
-        
-        <h1>abnr.dev</h1>
-        <p class="tagline">Desenvolvimento customizado e automação inteligente com IA</p>
-        
-        <div class="description">
-            <p>Transformamos ideias em soluções digitais sob medida. Utilizamos inteligência artificial e automação para criar sistemas que atendem exatamente às necessidades do seu negócio.</p>
+<body class="bg-gray-900 text-white">
+    
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 glass">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <img src="logo.png" alt="abnr.dev" class="h-10">
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="hover:text-gray-300 transition">Início</a>
+                    <a href="#services" class="hover:text-gray-300 transition">Serviços</a>
+                    <a href="#projects" class="hover:text-gray-300 transition">Projetos</a>
+                    <a href="#about" class="hover:text-gray-300 transition">Sobre</a>
+                    <a href="#contact" class="hover:text-gray-300 transition">Contato</a>
+                </div>
+                <a href="mailto:contato@abnr.dev" class="bg-white text-gray-900 px-6 py-2 rounded-full font-semibold hover:bg-gray-200 transition">
+                    Fale Conosco
+                </a>
+            </div>
         </div>
-        
-        <div class="features">
-            <div class="feature">
-                <h3>🤖 Automação Inteligente</h3>
-                <p>Processos automatizados com IA que economizam tempo e reduzem erros.</p>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="gradient-bg min-h-screen flex items-center justify-center pt-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="animate-fade-in-up">
+                <h1 class="text-5xl md:text-7xl font-bold mb-6">
+                    Desenvolvimento customizado<br>
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-600">
+                        com Inteligência Artificial
+                    </span>
+                </h1>
             </div>
             
-            <div class="feature">
-                <h3>💻 Desenvolvimento Customizado</h3>
-                <p>Sistemas desenvolvidos sob medida para as necessidades específicas do seu negócio.</p>
+            <p class="text-xl md:text-2xl text-gray-300 mb-12 max-w-3xl mx-auto animate-fade-in-up delay-100">
+                Transformamos suas ideias em soluções digitais inovadoras. Automatizamos processos e criamos sistemas sob medida para o seu negócio.
+            </p>
+            
+            <div class="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up delay-200">
+                <a href="#contact" class="bg-white text-gray-900 px-8 py-4 rounded-full font-bold text-lg hover:bg-gray-200 transition transform hover:scale-105">
+                    Começar Projeto
+                </a>
+                <a href="#services" class="glass px-8 py-4 rounded-full font-bold text-lg hover:bg-white hover:bg-opacity-10 transition transform hover:scale-105">
+                    Conheça Nossos Serviços
+                </a>
             </div>
             
-            <div class="feature">
-                <h3>🚀 Soluções Inovadoras</h3>
-                <p>Tecnologias de ponta aplicadas para criar produtos digitais modernos e eficientes.</p>
+            <div class="mt-20 animate-float">
+                <svg class="w-8 h-8 mx-auto text-white opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                </svg>
             </div>
         </div>
-        
-        <div class="contact">
-            <a href="mailto:contato@abnr.dev">Entre em contato</a>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">Nossos Serviços</h2>
+                <p class="text-xl text-gray-400">Soluções completas para o seu negócio</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="glass p-8 rounded-2xl hover-lift">
+                    <div class="text-5xl mb-4">🤖</div>
+                    <h3 class="text-2xl font-bold mb-4">Automação Inteligente</h3>
+                    <p class="text-gray-400 mb-6">
+                        Implementamos IA e automação para otimizar processos, reduzir custos e aumentar a eficiência operacional do seu negócio.
+                    </p>
+                    <ul class="text-gray-400 space-y-2">
+                        <li>✓ Chatbots e assistentes virtuais</li>
+                        <li>✓ Análise preditiva com IA</li>
+                        <li>✓ Automação de workflows</li>
+                        <li>✓ Integração de sistemas</li>
+                    </ul>
+                </div>
+                
+                <div class="glass p-8 rounded-2xl hover-lift delay-100">
+                    <div class="text-5xl mb-4">💻</div>
+                    <h3 class="text-2xl font-bold mb-4">Desenvolvimento Customizado</h3>
+                    <p class="text-gray-400 mb-6">
+                        Criamos sistemas web e mobile completamente personalizados, desenvolvidos sob medida para atender suas necessidades específicas.
+                    </p>
+                    <ul class="text-gray-400 space-y-2">
+                        <li>✓ Aplicações web responsivas</li>
+                        <li>✓ Apps mobile nativos</li>
+                        <li>✓ Dashboards e painéis admin</li>
+                        <li>✓ APIs e integrações</li>
+                    </ul>
+                </div>
+                
+                <div class="glass p-8 rounded-2xl hover-lift delay-200">
+                    <div class="text-5xl mb-4">🚀</div>
+                    <h3 class="text-2xl font-bold mb-4">Consultoria Tecnológica</h3>
+                    <p class="text-gray-400 mb-6">
+                        Orientação estratégica para transformação digital, arquitetura de software e escolha das melhores tecnologias para seu projeto.
+                    </p>
+                    <ul class="text-gray-400 space-y-2">
+                        <li>✓ Arquitetura de soluções</li>
+                        <li>✓ Code review e auditoria</li>
+                        <li>✓ Migração para cloud</li>
+                        <li>✓ DevOps e CI/CD</li>
+                    </ul>
+                </div>
+            </div>
         </div>
-    </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-gray-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">Projetos em Destaque</h2>
+                <p class="text-xl text-gray-400">Casos de sucesso que entregamos</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="glass rounded-2xl overflow-hidden hover-lift">
+                    <div class="h-48 bg-gradient-to-br from-purple-600 to-blue-600 flex items-center justify-center">
+                        <span class="text-6xl">🏋️</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">EffectSports</h3>
+                        <p class="text-gray-400 mb-4">Plataforma de gestão esportiva com sistema de reservas, pagamentos e gamificação.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-blue-600 text-xs px-3 py-1 rounded-full">Yii2 PHP</span>
+                            <span class="bg-purple-600 text-xs px-3 py-1 rounded-full">MySQL</span>
+                            <span class="bg-pink-600 text-xs px-3 py-1 rounded-full">Tailwind</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="glass rounded-2xl overflow-hidden hover-lift delay-100">
+                    <div class="h-48 bg-gradient-to-br from-green-600 to-teal-600 flex items-center justify-center">
+                        <span class="text-6xl">🌾</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">AgFlex</h3>
+                        <p class="text-gray-400 mb-4">Sistema de gestão agrícola com controle de safras, estoque e análise de dados.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-green-600 text-xs px-3 py-1 rounded-full">Node.js</span>
+                            <span class="bg-teal-600 text-xs px-3 py-1 rounded-full">React</span>
+                            <span class="bg-blue-600 text-xs px-3 py-1 rounded-full">PostgreSQL</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="glass rounded-2xl overflow-hidden hover-lift delay-200">
+                    <div class="h-48 bg-gradient-to-br from-orange-600 to-red-600 flex items-center justify-center">
+                        <span class="text-6xl">📊</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">ERP Template</h3>
+                        <p class="text-gray-400 mb-4">Sistema ERP modular com gestão financeira, estoque e relatórios avançados.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-orange-600 text-xs px-3 py-1 rounded-full">Laravel</span>
+                            <span class="bg-red-600 text-xs px-3 py-1 rounded-full">Vue.js</span>
+                            <span class="bg-purple-600 text-xs px-3 py-1 rounded-full">MariaDB</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technologies Section -->
+    <section class="py-20 bg-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">Tecnologias que Dominamos</h2>
+                <p class="text-xl text-gray-400">Stack moderno e robusto</p>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
+                <div class="glass p-6 rounded-xl text-center hover-lift">
+                    <div class="text-4xl mb-2">⚛️</div>
+                    <p class="font-semibold">React</p>
+                </div>
+                <div class="glass p-6 rounded-xl text-center hover-lift">
+                    <div class="text-4xl mb-2">🟢</div>
+                    <p class="font-semibold">Node.js</p>
+                </div>
+                <div class="glass p-6 rounded-xl text-center hover-lift">
+                    <div class="text-4xl mb-2">🐘</div>
+                    <p class="font-semibold">PHP</p>
+                </div>
+                <div class="glass p-6 rounded-xl text-center hover-lift">
+                    <div class="text-4xl mb-2">🐍</div>
+                    <p class="font-semibold">Python</p>
+                </div>
+                <div class="glass p-6 rounded-xl text-center hover-lift">
+                    <div class="text-4xl mb-2">🗄️</div>
+                    <p class="font-semibold">SQL</p>
+                </div>
+                <div class="glass p-6 rounded-xl text-center hover-lift">
+                    <div class="text-4xl mb-2">☁️</div>
+                    <p class="font-semibold">Cloud</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-gray-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-4xl md:text-5xl font-bold mb-6">Sobre a abnr.dev</h2>
+                    <p class="text-xl text-gray-400 mb-6">
+                        Somos especialistas em transformação digital e automação inteligente. Nossa missão é criar soluções tecnológicas que fazem a diferença real no dia a dia das empresas.
+                    </p>
+                    <p class="text-lg text-gray-400 mb-6">
+                        Com experiência em diversos segmentos, desde startups até grandes empresas, desenvolvemos projetos que combinam tecnologia de ponta com as melhores práticas do mercado.
+                    </p>
+                    <div class="grid grid-cols-3 gap-6 mt-8">
+                        <div class="text-center">
+                            <div class="text-4xl font-bold text-blue-400 mb-2">50+</div>
+                            <p class="text-gray-400">Projetos</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-4xl font-bold text-purple-400 mb-2">98%</div>
+                            <p class="text-gray-400">Satisfação</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-4xl font-bold text-pink-400 mb-2">24/7</div>
+                            <p class="text-gray-400">Suporte</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="glass p-8 rounded-2xl">
+                    <h3 class="text-2xl font-bold mb-6">Por que escolher a abnr.dev?</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <span class="text-green-400 mr-3 text-xl">✓</span>
+                            <span class="text-gray-300">Expertise em IA e automação de processos</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-green-400 mr-3 text-xl">✓</span>
+                            <span class="text-gray-300">Desenvolvimento ágil com entregas rápidas</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-green-400 mr-3 text-xl">✓</span>
+                            <span class="text-gray-300">Código limpo e documentado</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-green-400 mr-3 text-xl">✓</span>
+                            <span class="text-gray-300">Suporte técnico completo pós-entrega</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-green-400 mr-3 text-xl">✓</span>
+                            <span class="text-gray-300">Preços justos e transparentes</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gray-800">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-4xl md:text-5xl font-bold mb-6">Vamos Conversar?</h2>
+            <p class="text-xl text-gray-400 mb-12">
+                Tem um projeto em mente? Estamos prontos para transformar sua ideia em realidade.
+            </p>
+            
+            <div class="glass p-12 rounded-2xl">
+                <div class="grid md:grid-cols-2 gap-8 mb-8">
+                    <div>
+                        <h3 class="text-xl font-bold mb-3">📧 Email</h3>
+                        <a href="mailto:contato@abnr.dev" class="text-blue-400 hover:text-blue-300 text-lg">
+                            contato@abnr.dev
+                        </a>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-3">🌐 Website</h3>
+                        <a href="https://abnr.dev" class="text-blue-400 hover:text-blue-300 text-lg">
+                            abnr.dev
+                        </a>
+                    </div>
+                </div>
+                
+                <a href="mailto:contato@abnr.dev" class="inline-block bg-gradient-to-r from-blue-600 to-purple-600 px-12 py-4 rounded-full font-bold text-lg hover:from-blue-700 hover:to-purple-700 transition transform hover:scale-105">
+                    Iniciar um Projeto
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <img src="logo.png" alt="abnr.dev" class="h-8 mb-2">
+                    <p class="text-gray-400">Desenvolvimento customizado e automação com IA</p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="#home" class="text-gray-400 hover:text-white transition">Início</a>
+                    <a href="#services" class="text-gray-400 hover:text-white transition">Serviços</a>
+                    <a href="#projects" class="text-gray-400 hover:text-white transition">Projetos</a>
+                    <a href="#about" class="text-gray-400 hover:text-white transition">Sobre</a>
+                    <a href="#contact" class="text-gray-400 hover:text-white transition">Contato</a>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2026 abnr.dev. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
 </body>
 </html>
